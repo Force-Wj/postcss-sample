@@ -1,0 +1,12 @@
+@import "./reset.css";
+@import "./list/list.css";
+@import "./util.css";
+.text{
+	width: 100px;
+	height: 120px;
+	background: green;
+	@mixin ellipsis;
+	&:hover{
+		background:red;
+	};
+}

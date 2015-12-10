@@ -1,0 +1,10 @@
+@import "./config.css";
+@import "../util.css";
+.text{
+	width: 100px;
+	height: 100px;
+	background: green;
+	@mixin ellipsis;
+}
+
+

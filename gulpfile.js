@@ -3,14 +3,10 @@ var gulp = require('gulp'),
     postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
     precss = require("precss"),
-    browserSync = require("browser-sync");
+    puer = require("puer");
 
-gulp.task('browser-sync', function() {
-    browserSync({
-        server:{
-            baseDir:"./"
-        }
-    });
+gulp.task('puer', function() {
+    puer();
 });
 gulp.task('css', function () {
     var processors = [
@@ -23,7 +19,6 @@ gulp.task('css', function () {
         .pipe(gulp.dest('dist/'));
 });
 gulp.task('watch',function(){
-    gulp.watch('src/css/*.css',['css',browserSync.reload]);
-    gulp.watch('index.html',browserSync.reload);
+    gulp.watch('src/css/*.css',['css']);
 });
-gulp.task('default', ['css','browser-sync','watch']);
+gulp.task('default', ['css','puer','watch']);

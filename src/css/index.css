@@ -8,5 +8,5 @@
 	@mixin ellipsis;
 	&:hover{
 		background:red;
-	};
+	}
 }
